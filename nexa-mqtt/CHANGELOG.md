@@ -1,3 +1,6 @@
+## 0.0.34
+- Updated nexa-mqtt to version [`0.0.34`](https://github.com/mgerczuk/nexa-mqtt/releases/tag/v0.0.34)
+
 ## 0.0.29
 - Updated noah-mqtt to version [`0.0.29`](https://github.com/mtrossbach/noah-mqtt/releases/tag/v0.0.29)
 
