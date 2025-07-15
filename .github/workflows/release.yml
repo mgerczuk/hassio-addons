@@ -22,15 +22,15 @@ jobs:
           echo "version=${{ github.event.client_payload.version }}" >> "$GITHUB_OUTPUT"
       - name: Set version and update release
         run: |
-          jq '.version = "${{ steps.version.outputs.version }}"' noah-mqtt/config.json > noah-mqtt/config.json.tmp
-          mv noah-mqtt/config.json.tmp noah-mqtt//config.json
-          echo -e "## ${{ steps.version.outputs.version }}\n- Updated noah-mqtt to version [\`${{ steps.version.outputs.version }}\`](https://github.com/mtrossbach/noah-mqtt/releases/tag/v${{ steps.version.outputs.version }})\n" | cat - noah-mqtt/CHANGELOG.md > noah-mqtt/CHANGELOG.md.tmp
-          mv noah-mqtt/CHANGELOG.md.tmp noah-mqtt/CHANGELOG.md
+          jq '.version = "${{ steps.version.outputs.version }}"' nexa-mqtt/config.json > nexa-mqtt/config.json.tmp
+          mv nexa-mqtt/config.json.tmp nexa-mqtt//config.json
+          echo -e "## ${{ steps.version.outputs.version }}\n- Updated nexa-mqtt to version [\`${{ steps.version.outputs.version }}\`](https://github.com/mgerczuk/nexa-mqtt/releases/tag/v${{ steps.version.outputs.version }})\n" | cat - nexa-mqtt/CHANGELOG.md > nexa-mqtt/CHANGELOG.md.tmp
+          mv nexa-mqtt/CHANGELOG.md.tmp nexa-mqtt/CHANGELOG.md
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "v${{ steps.version.outputs.version }}"
       - uses: ncipollo/release-action@v1
         with:
           tag: "v${{ steps.version.outputs.version }}"
-          body: "- Updated noah-mqtt to version [`${{ steps.version.outputs.version }}`](https://github.com/mtrossbach/noah-mqtt/releases/tag/v${{ steps.version.outputs.version }})"
+          body: "- Updated nexa-mqtt to version [`${{ steps.version.outputs.version }}`](https://github.com/mgerczuk/nexa-mqtt/releases/tag/v${{ steps.version.outputs.version }})"
           token: ${{secrets.GITHUB_TOKEN}}

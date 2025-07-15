@@ -19,4 +19,4 @@ export GROWATT_PASSWORD="$(bashio::config 'growatt_password')"
 export LOG_LEVEL="$(bashio::config 'log_level')"
 export POLLING_INTERVAL="$(bashio::config 'polling_interval')"
 
-/noah-mqtt
+/nexa-mqtt
