@@ -1,3 +1,6 @@
+## 0.2.0
+- Updated nexa-mqtt to version [`0.2.0`](https://github.com/mgerczuk/nexa-mqtt/releases/tag/v0.2.0)
+
 ## 0.1.2
 - Updated nexa-mqtt to version [`0.1.2`](https://github.com/mgerczuk/nexa-mqtt/releases/tag/v0.1.2)
 
