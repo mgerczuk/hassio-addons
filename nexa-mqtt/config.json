@@ -27,6 +27,7 @@
     "growatt_api_mode": "list(web+app|web|app)",
     "growatt_username": "str",
     "growatt_password": "password",
+    "growatt_tz": "Europe/Berlin",
     "mqtt": {
       "host": "str?",
       "port": "int?",
