@@ -19,7 +19,8 @@
     "log_level": "INFO",
     "polling_interval": 30,
     "mqtt": {},
-    "growatt_api_mode": "web+app"
+    "growatt_api_mode": "web+app",
+    "growatt_tz": "Europe/Berlin"
   },
   "schema": {
     "log_level": "list(DEBUG|INFO|WARN|ERROR)",
@@ -27,7 +28,7 @@
     "growatt_api_mode": "list(web+app|web|app)",
     "growatt_username": "str",
     "growatt_password": "password",
-    "growatt_tz": "Europe/Berlin",
+    "growatt_tz": "str",
     "mqtt": {
       "host": "str?",
       "port": "int?",
